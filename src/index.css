@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F0F0F;
+  --color-gray: #262626;
+  --font-league: "LeagueSpartan", sans-serif;
+  --font-barlow: "Barlow-Medium", sans-serif;
+  --animate-infinite-scroll: infinite-scroll 15s linear infinite;
+
+  @keyframes infinite-scroll {
+      0% {
+        transform: translateX(0);
+      }
+  
+      100% {
+        transform: translateX(calc(-30%));
+      }
+    }
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("./assets/fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Barlow-Medium;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("./assets/fonts/Barlow-Medium.ttf") format("truetype");
+}
+
