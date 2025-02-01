@@ -3,9 +3,13 @@ import { videos } from "../utils/resources";
 const VideoCarousel = () => {
     return (
     <>
-      <div className="min-h-72 w-full p-4 md:p-6 flex gap-6 animate-infinite-scroll overflow-hi">
-          {[...videos, ...videos].map( (video, id) => <VideoCarouselItem video={video} id={id} />)}
-      </div>   
+      <div className="w-full flex justify-center">
+        <div className="h-auto w-[95%] overflow-hidden">
+          <div className="min-h-72 w-full p-4 md:p-6 flex gap-6 animate-infinite-scroll ">
+              {[...videos, ...videos].map( (video, id) => <VideoCarouselItem video={video} id={id} />)}
+          </div>   
+        </div>
+      </div>
     </>
   )
 };

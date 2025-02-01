@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-primary">
+      <div className="bg-primary overflow-hidden">
         <div className="w-screen h-screen relative flex justify-center">
           <div className="h-screen w-screen overflow-hidden z-0 ">
             <HeroBG />
@@ -36,9 +36,8 @@ function App() {
           </div>
         </div>
 
-        <div className="h-auto w-full">
-          <VideoCarousel />
-        </div>
+        <VideoCarousel />
+        
 
       </div>
     </>
