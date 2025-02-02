@@ -21,7 +21,7 @@ const menus = [
         href: "#projects",
     },
     {
-        name: "ContactUs",
+        name: "Contact Us",
         href: "#contact",
     }
 ]
@@ -31,22 +31,22 @@ const Header = () => {
 
     return <>
         <div className=" p-2 px-6 md:p-6 z-40  flex justify-center items-center h-20">
-            <header className="z-40 fixed md:w-auto flex jutisfy-between items-center h-[55px] pl-4 px-2  bg-white/10 backdrop-blur-lg border-mywhite-border shadow-md rounded-xl">
+            <header className="z-[100] fixed md:w-auto flex jutisfy-between items-center h-[55px] pl-4 px-2  bg-white/10 backdrop-blur-lg border-mywhite-border shadow-md rounded-xl">
                 <div className="flex justify-between w-full h-full gap-4">
-                <div className=" h-full flex items-center ">
+                <div className=" h-full flex items-center">
                 <LogoSVG />
                 </div>
                 <div className="flex gap-0 ">
                     {
                             menus.map((menu, index) => (
                             <a
-                                    className="h-full flex justify-center items-center"
+                                    className="h-full flex justify-center items-center outline-0"
                                     href={menu.href}
                                     key={index}
                             >
                                     
                             <span
-                                className="text-white font-barlow text-sm md:text-base px-4 py-3 rounded-full"   
+                                className="text-white font-barlow tracking-wide text-sm md:text-base px-4 py-3 rounded-full"   
                         >{menu.name}
                         </span></a>
                         ))

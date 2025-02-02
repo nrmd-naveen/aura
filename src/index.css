@@ -2,6 +2,8 @@
 
 @theme {
   --color-primary: #0F0F0F;
+  --color-p-txt: #98989A;
+  --color-gray-txt: #666666;
   --color-gray: #262626;
   --font-league: "LeagueSpartan", sans-serif;
   --font-barlow: "Barlow-Medium", sans-serif;
@@ -31,6 +33,6 @@
   font-style: normal;
   font-weight: 200 700;
   font-display: swap;
-  src: url("./assets/fonts/Barlow-Medium.ttf") format("truetype");
+  src: url("./assets/fonts/Barlow-Regular.ttf") format("truetype");
 }
 

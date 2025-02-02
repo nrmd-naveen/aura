@@ -19,7 +19,7 @@ const Button = (props: ButtonProps) => {
         secondary: "bg-gray text-white inset-ring-2 inset-ring-white/20",
         outline: "bg-transparent text-white inset-ring-2 inset-ring-white/20",
     }
-    const defaultStyles = "flex justify-center items-center max-h-10 min-w-10 px-4 py-6 rounded-lg font-barlow font-bold"
+    const defaultStyles = "z-40 cursor-pointer flex justify-center items-center max-h-10 min-w-10 px-4 py-6 rounded-lg font-barlow font-bold"
     return <>
         <button
             disabled={props.disabled}

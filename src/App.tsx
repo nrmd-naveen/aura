@@ -1,3 +1,7 @@
+import HeaderHeadings from "./assets/components/HeaderTexts";
+import HeroTagLine from "./assets/components/HeroTagLine";
+import GraphSVG from "./assets/svg/GraphSVG";
+import Button from "./assets/ui/Button";
 import NavBar from "./assets/ui/NavBar"
 
 
@@ -5,9 +9,27 @@ function App() {
 
   return (
     <>
-      <div className="w-screen overflow-hidden h-screen bg-primary">
+      <div className="w-screen relative overflow-hidden h-[100vh] bg-primary">
+        <div className=" flex items-center justify-center absolute z-0 md:right-20 -right-110 md:bottom-0 bottom-[20%] ">
+            <GraphSVG />
+        </div>
         <NavBar />
+        <HeaderHeadings />
+        <HeroTagLine />
+        <div className="flex justify-center gap-5 mt-8">
+          <Button
+          variant="primary"
+          text="Get Started"
+          onClick={() => alert("Get Started")}
+          />
+        <Button
+          variant="secondary"
+          text="Our Works"
+          onClick={() => alert("Our Works")}
+          />
+        </div>
     </div>
+    
     </>
   )
   
