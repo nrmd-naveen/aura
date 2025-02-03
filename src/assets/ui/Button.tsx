@@ -1,5 +1,4 @@
-
-
+import clsx from 'clsx';
 
 interface ButtonProps {
     text: string,
@@ -23,7 +22,7 @@ const Button = (props: ButtonProps) => {
     return <>
         <button
             disabled={props.disabled}
-            className={`${defaultStyles} ${props.variant ? variantStyles[props.variant] : variantStyles.primary} ${props.className}`}
+           className={clsx(defaultStyles, props.variant ? variantStyles[props.variant] : variantStyles.primary, props.className)}
             onClick={props.onClick}
         >
             <span className=" flex justify-center items-center gap-2">

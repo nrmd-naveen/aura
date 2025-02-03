@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
+body {
+  background-color: #0F0F0F
+}
+
 @theme {
   --color-primary: #0F0F0F;
   --color-p-txt: #98989A;
   --color-gray-txt: #666666;
   --color-gray: #262626;
+  --shadow-inner-left: inset 9px 6px 6px rgba(255, 255, 255, 0.1);
   --font-league: "LeagueSpartan", sans-serif;
   --font-barlow: "Barlow-Medium", sans-serif;
+  --font-sora: "Sora", sans-serif;
   --animate-infinite-scroll: infinite-scroll 15s linear infinite;
 
   @keyframes infinite-scroll {
@@ -36,3 +42,10 @@
   src: url("./assets/fonts/Barlow-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: Sora;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("./assets/fonts/Sora-VariableFont_wght.ttf") format("truetype");
+}
