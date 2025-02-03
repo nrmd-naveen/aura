@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="w-screen relative overflow-hidden bg-primary px-4">
-        {/* <HeroSection /> */}
+        <HeroSection />
         <WhyAura />
       </div>
     

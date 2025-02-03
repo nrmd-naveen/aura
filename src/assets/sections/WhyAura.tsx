@@ -10,25 +10,26 @@ const WhyAura = () => {
         <>
             <div className="w-full border-t-[0.5px] border-white/20">
                 <Heading />
-                <div className="flex gap-2 justify-center items-center overflow-x-scroll mt-4">
+                <div className="flex gap-2 justify-center items-center overflow-x-scroll mt-8">
                 { cardData.map((card, index) => (<Card props={card} key={index} /> )) }
                 </div>
             </div>
+            <div className="h-screen"></div>
         </>
   )
 };
 
 const Heading = () => {
     return (
-        <div className="font-league flex flex-col items-center text-center mt-11 px-4 text-nowrap" >
-      <h2 className="text-white text-3xl font-bold ">
-        Reasons to Choose{" "}
-        <span className="font-league-extrabold text-5xl text-white">aura</span> for
+        <div className="font-league flex flex-col items-center text-center mt-20 px-4 text-nowrap text-[28px] md:text-5xl font-medium " >
+      <h2 className="text-white ">
+        Reasons to Choose
+        <span className="font-bold tracking-tight text-5xl md:text-7xl text-white pl-2 pr-1">aura</span> for
       </h2>
-      <h3 className="text-gray-txt text-4xl font-medium mt-2">
+      <h3 className="text-gray-txt  mt-2">
         Your Digital Journey
       </h3>
-      <p className=" text-gray-txt mt-4 max-w-10xl">
+      <p className=" text-p-txt text-base md:text-lg mt-4 lg:px-40 xl:px-72  text-wrap">
         At Aura, we believe in transforming your brand through innovative
         strategies and creative excellence. Here’s why we’re the right choice
         for your business
