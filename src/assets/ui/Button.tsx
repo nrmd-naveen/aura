@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 interface ButtonProps {
-    text: string,
+    text?: string,
     href?: string,
     onClick: () => void,
     variant?: "primary" | "secondary" | "outline",

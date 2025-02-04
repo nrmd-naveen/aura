@@ -2,7 +2,7 @@ import { BulbIcon, ClickIcon, MobileIcon, ShineIcon, ThunderIcon, WindowsIcon,  
 
 export const cardData = [
     {
-        title: "Tailored Solutions for Your Success",
+        title: "Tailored Solutions for Success",
         paragraph: "We understand your unique vision and create strategies that align with your goals.",
         icon: <BulbIcon />,
     },

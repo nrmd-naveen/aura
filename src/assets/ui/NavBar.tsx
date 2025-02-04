@@ -30,7 +30,7 @@ const menus = [
 const Header = () => {
 
     return <>
-        <div className=" p-2 px-6 md:p-6 z-40  flex justify-center items-center h-20">
+        <div className=" p-2 px-6 md:p-6 z-40  flex justify-center items-center h-20 ">
             <header className="z-[100] fixed md:w-auto flex jutisfy-between items-center h-[55px] pl-4 px-2  bg-white/10 backdrop-blur-lg border-mywhite-border shadow-md rounded-xl">
                 <div className="flex justify-between w-full h-full gap-4">
                 <div className=" h-full flex items-center">

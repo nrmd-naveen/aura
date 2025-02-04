@@ -1,12 +1,14 @@
+import CardCarousel from "./assets/components/CardCarousal"
 import HeroSection from "./assets/sections/HeroSection"
 import WhyAura from "./assets/sections/WhyAura"
+import VideoCarousel from "./assets/ui/VideoCarousel"
 
 
 function App() {
 
   return (
     <>
-      <div className="w-screen relative overflow-hidden bg-primary px-4">
+      <div className="w-screen relative overflow-hidden bg-primary">
         <HeroSection />
         <WhyAura />
       </div>

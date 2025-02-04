@@ -2,17 +2,16 @@ import React from "react";
 import { BulbIcon, RightArrow } from "../svg/Icons";
 import Button from "../ui/Button";
 import { cardData } from "../utils/config";
+import WhySectionCarousal from "../components/CardCarousal";
 
 
 
 const WhyAura = () => {
     return (
         <>
-            <div className="w-full border-t-[0.5px] border-white/20">
+            <div className="w-full border-t-[0.5px] border-white/20 flex flex-col gap-3 md:gap-5  pt-6">
                 <Heading />
-                <div className="flex gap-2 justify-center items-center overflow-x-scroll mt-8">
-                { cardData.map((card, index) => (<Card props={card} key={index} /> )) }
-                </div>
+                <WhySectionCarousal />
             </div>
             <div className="h-screen"></div>
         </>
@@ -21,7 +20,7 @@ const WhyAura = () => {
 
 const Heading = () => {
     return (
-        <div className="font-league flex flex-col items-center text-center mt-20 px-4 text-nowrap text-[28px] md:text-5xl font-medium " >
+        <div className=" font-league flex flex-col items-center text-center mt-20 px-4 text-nowrap text-[28px] md:text-5xl font-medium " >
       <h2 className="text-white ">
         Reasons to Choose
         <span className="font-bold tracking-tight text-5xl md:text-7xl text-white pl-2 pr-1">aura</span> for
