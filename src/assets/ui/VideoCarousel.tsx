@@ -5,7 +5,7 @@ const VideoCarousel = () => {
     <>
       <div className="w-full flex justify-center">
         <div className="h-auto w-[95%] overflow-hidden">
-          <div className="min-h-72 w-full p-4 md:p-6 flex gap-6 animate-infinite-scroll ">
+          <div className="min-h-72 w-full p-4 md:p-6 flex gap-6 animate-infinite-scroll md:animate-infinite-scroll-desk ">
               {[...videos, ...videos].map( (video, id) => <VideoCarouselItem video={video} id={id} />)}
           </div>   
         </div>

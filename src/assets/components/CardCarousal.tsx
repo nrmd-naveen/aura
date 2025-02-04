@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
 import { LeftArrow, RightArrow } from "../svg/Icons";
@@ -15,7 +15,7 @@ export default function WhySectionCarousal() {
     return () => clearInterval(interval);
   }, []);
 
-  const getPosition = (idx) => {
+  const getPosition = (idx: number) => {
     if (idx === index) return "z-10 scale-110";
     if (idx === (index + 1) % cardData.length) return "z-0 scale-90 translate-x-70 md:translate-x-90 opacity-80";
     if (idx === (index - 1 + cardData.length) % cardData.length) return "z-0 scale-90 md:-translate-x-90 -translate-x-70  opacity-80";
@@ -66,7 +66,15 @@ export default function WhySectionCarousal() {
 }
 
 
-const Card = ( {props} ) => {
+const Card = ({
+  props
+}: {
+    props: {
+    icon: React.ReactNode,
+    title: string,
+    paragraph: string
+  }
+} ) => {
     return (
         <div key={props.title} className="min-h-52 h-80 md:h-90 w-64 md:w-80 bg-gray rounded-lg p-4 py-8 flex flex-col gap-8 items-center justify-center" >
             <Icon icon={props.icon} />
@@ -88,7 +96,7 @@ const Card = ( {props} ) => {
         </div>
     )
 }
-const Icon = ({icon}) => {
+const Icon = ({icon } : { icon: React.ReactNode}) => {
     
     return (
         <>

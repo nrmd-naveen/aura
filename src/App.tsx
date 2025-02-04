@@ -1,5 +1,7 @@
 import CardCarousel from "./assets/components/CardCarousal"
 import HeroSection from "./assets/sections/HeroSection"
+import OurWorks from "./assets/sections/OurWorks"
+import Testimonials from "./assets/sections/Testimonials"
 import WhyAura from "./assets/sections/WhyAura"
 import VideoCarousel from "./assets/ui/VideoCarousel"
 
@@ -11,6 +13,11 @@ function App() {
       <div className="w-screen relative overflow-hidden bg-primary">
         <HeroSection />
         <WhyAura />
+        <OurWorks />
+        <Testimonials />
+        {/* <div>
+          <VideoCarousel />
+        </div> */}
       </div>
     
     </>

@@ -1,4 +1,4 @@
-import { BulbIcon, ClickIcon, MobileIcon, ShineIcon, ThunderIcon, WindowsIcon,  } from "../svg/Icons";
+import { BulbIcon, ClickIcon, Instagram, MobileIcon, ShineIcon, ThunderIcon, WindowsIcon,  } from "../svg/Icons";
 
 export const cardData = [
     {
@@ -30,5 +30,45 @@ export const cardData = [
         title: "Building Long-Term Relationships",
         paragraph: "We prioritize lasting partnerships that evolve with your business for sustained success.",
         icon: <MobileIcon />,
+    },
+]
+
+
+export const testiData = [
+    {
+        icon: <Instagram />,
+        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
+        name: "Client name",
+        company: "Company Name"
+    },
+    {
+        icon: <Instagram />,
+        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
+        name: "Client name",
+        company: "Company Name"
+    },
+    {
+        icon: <Instagram />,
+        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
+        name: "Client name",
+        company: "Company Name"
+    },
+    {
+        icon: <Instagram />,
+        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
+        name: "Client name",
+        company: "Company Name"
+    },
+    {
+        icon: <Instagram />,
+        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
+        name: "Client name",
+        company: "Company Name"
+    },
+    {
+        icon: <Instagram />,
+        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
+        name: "Client name",
+        company: "Company Name"
     },
 ]
