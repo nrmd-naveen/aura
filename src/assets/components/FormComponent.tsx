@@ -191,7 +191,7 @@ export default function ContactForm() {
           
         <Button
           text={isSubmitting ? "Sending..." : "Send your Inquiry →"}
-          variant="secondary"
+          variant="primary"
           disabled={isSubmitting}
           type="submit"
           />

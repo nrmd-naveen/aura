@@ -6,7 +6,7 @@ const FloatingIcons = () => {
     <div className="relative min-h-screen">
       {/* Graphh - Top Left */}
       <motion.div
-        className="absolute top-[4%] left-[18%]"
+        className="absolute -top-[5%] md:top-[4%] -left-[5%] md:left-[18%]"
         initial={{ x: 50, y: 50 }}
         animate={{ rotate: [3, -3, 3, 3] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -26,7 +26,7 @@ const FloatingIcons = () => {
 
       {/* Camerah - Bottom Left */}
       <motion.div
-        className=" absolute top-[29%] right-[25%]"
+        className=" absolute top-[14%] md:top-[29%] right-[25%]"
         initial={{ x: -50, y: 50 }}
         animate={{ rotate: [0, 3, -3, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -36,7 +36,7 @@ const FloatingIcons = () => {
 
       {/* Instagramh - Bottom Right */}
       <motion.div
-        className=" absolute top-[0%] right-[22%]"
+        className=" absolute top-[0%] right-[0%] md:right-[22%] "
         initial={{ x: -50, y: -50 }}
         animate={{ y: [-3, 3, -3] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
