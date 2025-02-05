@@ -90,6 +90,7 @@ const Card = ({
                 className="rounded-b-3xl pl-6 rounded-t-3xl inset-ring-[0.5px]"
                 variant="outline"
                 text="learn more"
+                href="#testimonials"
                 icon={<RightArrow />}
                 onClick={()=> alert("clicked")}
             />

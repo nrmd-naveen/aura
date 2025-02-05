@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
 interface ButtonProps {
+    type?: string
     text?: string,
     href?: string,
     onClick: () => void,
@@ -9,7 +10,7 @@ interface ButtonProps {
     fullWidth?: boolean,
     className?: string,
     icon?: React.ReactNode,
-    iconPosition?: "right" | "left"
+    iconPosition?: "right" | "left",
 }
 
 const Button = (props: ButtonProps) => {
@@ -24,6 +25,7 @@ const Button = (props: ButtonProps) => {
             disabled={props.disabled}
            className={clsx(defaultStyles, props.variant ? variantStyles[props.variant] : variantStyles.primary, props.className)}
             onClick={props.onClick}
+            type={props.type}
         >
             <span className=" flex justify-center items-center gap-2">
                 {props.iconPosition === 'left' && props.icon}

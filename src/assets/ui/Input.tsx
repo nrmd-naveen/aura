@@ -22,7 +22,7 @@ const Input = (props: InputProps) => {
     return (
         <>
             <input
-                className={clsx(defaultStyles, props.variant ? variantStyles[props.variant] : variantStyles.primary, props.className)}
+                className={clsx(defaultStyles, props.fullWidth? 'w-full md:w-auto' : '', props.variant ? variantStyles[props.variant] : variantStyles.primary, props.className)}
                 type={props.type}
                 placeholder={props.placeHolder}
                 {...props.register(props.name)}

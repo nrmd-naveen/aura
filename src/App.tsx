@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import CardCarousel from "./assets/components/CardCarousal";
 import HeroSection from "./assets/sections/HeroSection";
 import OurWorks from "./assets/sections/OurWorks";
@@ -7,10 +8,41 @@ import VideoCarousel from "./assets/components/VideoCarousel";
 import ContactForm from "./assets/components/FormComponent";
 
 function App() {
+=======
+import CardCarousel from "./assets/components/CardCarousal"
+import HeroSection from "./assets/sections/HeroSection"
+import OurWorks from "./assets/sections/OurWorks"
+import Testimonials from "./assets/sections/Testimonials"
+import WhyAura from "./assets/sections/WhyAura"
+import VideoCarousel from "./assets/components/VideoCarousel"
+import ContactForm from "./assets/components/FormComponent"
+import { useRef } from "react"
+import NavBar from "./assets/ui/NavBar"
+import ContactSection from "./assets/sections/contactSection"
+
+
+function App() {
+  // Use useRef to create references for each section
+  const heroRef = useRef(null);
+  const whySecRef = useRef(null);
+  const projectsRef = useRef(null);
+  const testiRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Scroll to the section when button is clicked
+  const scrollToSection = (sectionRef) => {
+    window.scrollTo({
+      top: sectionRef.current.offsetTop - 120,
+      behavior: 'smooth',
+    });
+  };
+
+>>>>>>> ed3fa693cb63b069462b69469262f54457a46b6d
   return (
     <>
       <div className="w-screen relative overflow-hidden bg-primary">
         {/* <HeroSection /> */}
+<<<<<<< HEAD
 
         {/* <ContactForm /> */}
 
@@ -18,6 +50,16 @@ function App() {
         <WhyAura />
         <OurWorks />
         <Testimonials />
+=======
+        <NavBar heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} scrollToSection={scrollToSection} />
+        
+        <HeroSection heroRef={heroRef} />
+        <WhyAura whySecRef={whySecRef} />
+        <OurWorks projectsRef={projectsRef} />
+        <Testimonials testiRef={testiRef} />
+        <ContactSection contactRef={contactRef} />
+        
+>>>>>>> ed3fa693cb63b069462b69469262f54457a46b6d
       </div>
     </>
   );

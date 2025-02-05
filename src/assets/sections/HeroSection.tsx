@@ -6,6 +6,7 @@ import Button from "../ui/Button";
 import NavBar from "../ui/NavBar";
 import FloatingIcons from "../components/heroelements";
 
+<<<<<<< HEAD
 const HeroSection = () => {
   const { scrollY } = useScroll();
   let y = useTransform(scrollY, [0, 800], ["0%", "20%"]);
@@ -41,6 +42,35 @@ const HeroSection = () => {
       </div>
     </>
   );
+=======
+const HeroSection = ({ heroRef }) => {
+
+    const { scrollY } = useScroll()
+    let y = useTransform(scrollY, [0,800], ["0%", "20%"])
+    return (
+        <>
+        <section id="heroSection" ref={heroRef} className="w-screen h-screen relative overflow-hidden bg-primary">    
+            <motion.div style={{ y }} className=" flex items-center justify-center absolute z-0 md:right-20 -right-110 md:bottom-0 bottom-[23%] ">
+                <GraphSVG />
+            </motion.div>
+            <HeaderHeadings />
+            <HeroTagLine />
+            <div className="flex justify-center gap-5 mt-12 md:mt-8">
+            <Button
+            variant="primary"
+            text="Get Started"
+            onClick={() => alert("Get Started")}
+            />
+            <Button
+            variant="secondary"
+            text="Our Works"
+            onClick={() => alert("Our Works")}
+            />
+            </div>
+        </section>
+        </>
+  )
+>>>>>>> ed3fa693cb63b069462b69469262f54457a46b6d
 };
 
 export default HeroSection;
