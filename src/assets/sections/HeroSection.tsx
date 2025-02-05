@@ -6,12 +6,12 @@ import Button from "../ui/Button";
 import NavBar from "../ui/NavBar";
 import FloatingIcons from "../components/heroelements";
 
-const HeroSection = () => {
+const HeroSection = ({ heroRef }) => {
   const { scrollY } = useScroll();
   let y = useTransform(scrollY, [0, 800], ["0%", "20%"]);
   return (
     <>
-      <div>
+      <section id="heroSection" ref={heroRef}>
         <div className="absolute z-40 w-screen ">
           <FloatingIcons />
         </div>
@@ -38,7 +38,7 @@ const HeroSection = () => {
             />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

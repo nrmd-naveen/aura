@@ -1,4 +1,48 @@
-import { BulbIcon, ClickIcon, Instagram, MobileIcon, ShineIcon, ThunderIcon, WindowsIcon,  } from "../svg/Icons";
+import { BulbIcon, ClickIcon, Contents, Digitals, Editings, Instagram, Logos, MobileIcon, ShineIcon, Shoots, Socials, ThunderIcon, Websites, WindowsIcon,  } from "../svg/Icons";
+
+export const servicesData = [
+    {
+        title: "Logo Design",
+        paragraph: "Create a unique, professional logo that defines your brand's identity and leaves a lasting impression.",
+        icon: <Logos />
+    },
+    {
+        title: "Website Development",
+        paragraph: "Build a responsive, user-friendly website designed to enhance your online presence and provide a seamless experience.",
+        icon: <Websites />
+    },
+    {
+        title: "Digital / Influencer Marketing",
+        paragraph: "Drive brand awareness and engagement through targeted digital campaigns, content creation, and influencer partnerships.",
+        icon: <Digitals />
+    },
+    {
+        title: "Content Writing",
+        paragraph: "Craft high-quality, engaging content tailored to your audience, enhancing your brand’s voice and online presence.",
+        icon: <Contents />
+    },
+    {
+        title: "Video Editing",
+        paragraph: "Transform raw footage into polished, engaging videos that capture attention and convey your message effectively.",
+        icon: <Editings />
+    },
+    {
+        title: "Advertisement Shoot",
+        paragraph: "Capture stunning visuals through professional shoots that communicate your brand’s story and attract attention.",
+        icon: <Shoots />
+    },
+    {
+        title: "Social Media Management",
+        paragraph: "Enhance your brand’s presence by creating and managing engaging content across social media platforms.",
+        icon: <Socials />
+    },
+    {
+        title: "Meta / Google Ads",
+        paragraph: "Reach your audience with targeted ads on Meta and Google, maximizing ROI through optimized campaigns.",
+        icon: <ClickIcon />
+    }
+]
+
 
 export const cardData = [
     {

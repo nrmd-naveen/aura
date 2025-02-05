@@ -8,6 +8,7 @@ import ContactForm from "./assets/components/FormComponent"
 import { useRef } from "react"
 import NavBar from "./assets/ui/NavBar"
 import ContactSection from "./assets/sections/contactSection"
+import Services from "./assets/sections/Services"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   const projectsRef = useRef(null);
   const testiRef = useRef(null);
   const contactRef = useRef(null);
+  const servicesRef = useRef(null);
 
   // Scroll to the section when button is clicked
   const scrollToSection = (sectionRef) => {
@@ -32,9 +34,11 @@ function App() {
         {/* <HeroSection /> */}
         <NavBar heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} scrollToSection={scrollToSection} />
         
+
         <HeroSection heroRef={heroRef} />
         <WhyAura whySecRef={whySecRef} />
         <OurWorks projectsRef={projectsRef} />
+        <Services servicesRef={servicesRef}/>
         <Testimonials testiRef={testiRef} />
         <ContactSection contactRef={contactRef} />
         

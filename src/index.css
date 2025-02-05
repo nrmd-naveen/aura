@@ -61,3 +61,15 @@ body {
   font-display: swap;
   src: url("./assets/fonts/Sora-VariableFont_wght.ttf") format("truetype");
 }
+
+
+.border-gradient {
+  border: 4px solid transparent;
+  /* Set the border size and make it transparent */
+  background-image: linear-gradient(to bottom, #333, #3333330a, transparent);
+  /* Define the gradient */
+  background-origin: border-box;
+  /* Make the gradient apply to the border */
+  background-clip: border-box;
+  /* Clip the background to the border */
+}
