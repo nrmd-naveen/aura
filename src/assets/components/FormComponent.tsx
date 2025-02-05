@@ -4,6 +4,7 @@ import * as z from "zod";
 import emailjs from "emailjs-com";
 import { useState } from "react"; // Import useState
 import Input from "../ui/Input";
+import Button from "../ui/Button";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -90,15 +91,16 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black px-6">
+    <div className="md:mt-8 flex items-center justify-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-black text-white p-6 rounded-lg w-full max-w-3xl"
+        className=" text-white p-6 rounded-lg w-full max-w-3xl"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <label className="block mb-1">Name</label>
             <Input
+                fullWidth={true}
                 placeHolder="name"
                 type="text"
                 variant="outline"
@@ -113,6 +115,7 @@ export default function ContactForm() {
             <div>
             <label className="block mb-1">Email</label>
             <Input
+                fullWidth={true}
                 placeHolder="Email"
                 type="email"
                 variant="outline"
@@ -127,6 +130,7 @@ export default function ContactForm() {
           <div>
             <label className="block mb-1">Phone Number</label>
             <Input
+                fullWidth={true}
                 placeHolder="phone"
                 type="text"
                 variant="outline"
@@ -141,25 +145,30 @@ export default function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <div>
+          <div className="relative">
             <label className="block mb-1">Select Service</label>
             <select
               {...register("service")}
-              className="w-full p-3 rounded-lg bg-gray-900 text-white outline-none"
+              className="w-full outline-none flex justify-center items-center pl-6 pr-10 py-4 md:py-3 rounded-full font-sora text-white text-sm md:text-base bg-transparent inset-ring-2 inset-ring-white/20   appearance-none"
             >
-              <option value="">Select your Service</option>
-              <option value="Logo design">Logo design</option>
-              <option value="Website Development">Website Development</option>
-              <option value="Digital / Content/ Influencer Marketing">
+              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="">Select your Service</option>
+              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Logo design">Logo design</option>
+              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Website Development">Website Development</option>
+              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Digital / Content/ Influencer Marketing">
                 Digital / Content/ Influencer Marketing
               </option>
-              <option value="Video editing">Video editing</option>
-              <option value="Advertisement shoot">Advertisement shoot</option>
-              <option value="Social media management">
+              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Video editing">Video editing</option>
+              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Advertisement shoot">Advertisement shoot</option>
+              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Social media management">
                 Social media management
               </option>
-              <option value="Meta / Google ads">Meta / Google ads</option>
+              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Meta / Google ads">Meta / Google ads</option>
             </select>
+            <span className="absolute right-4 top-2/3 transform -translate-y-1/2 text-gray-txt">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+            </span>
             {errors.service && (
               <p className="text-red-500 text-sm">{errors.service.message}</p>
             )}
@@ -170,7 +179,7 @@ export default function ContactForm() {
           <label className="block mb-1">Message</label>
           <textarea
             {...register("message")}
-            className="w-full p-3 rounded-lg bg-gray-900 text-white outline-none"
+            className="w-full outline-none flex justify-center items-center pl-6 pr-10 py-5 rounded-3xl font-sora textwhite text-sm md:text-base bg-transparent inset-ring-2 inset-ring-white/20 placeholder-gray-txt"
             placeholder="Enter your Message"
             rows="4"
           />
@@ -178,14 +187,16 @@ export default function ContactForm() {
             <p className="text-red-500 text-sm">{errors.message.message}</p>
           )}
         </div>
+        <div className="flex items-center justify-center my-6">
           
-        <button
+        <Button
+          text={isSubmitting ? "Sending..." : "Send your Inquiry →"}
+          variant="secondary"
+          disabled={isSubmitting}
           type="submit"
-          className="mt-6 w-full p-3 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition duration-300 flex justify-center items-center"
-          disabled={isSubmitting} // Disable button while submitting
-        >
-          {isSubmitting ? "Sending..." : "Send your Inquiry →"}
-        </button>
+          />
+        </div>
+        
       </form>
     </div>
   );

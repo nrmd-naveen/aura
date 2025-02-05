@@ -1,14 +1,14 @@
 
 import VideoCarousel from "../components/VideoCarousel";
 
-const OurWorks = () => {
+const OurWorks = ({ projectsRef }) => {
   return <>
-          <div className="my-20 md:my-40">
+          <section id="ourWorks" ref={projectsRef} className="my-20 md:my-40">
               <Heading />
               <div>
                 <VideoCarousel />
               </div>
-          </div>
+          </section>
       </>
 };
 

@@ -10,7 +10,7 @@ const HeroTagLine = () => {
             Innovative Digital Solutions to Ignite Growth
           </p>
 
-          <div className="z-40 min-h-16 min-w-40 font-barlow p-2 px-4  flex jutisfy-between items-center  bg-[#242424]/20 backdrop-blur-lg border-2 border-white/10 shadow-md rounded-lg whitespace-nowrap">
+          <div className="z-40 min-h-16 min-w-40 font-barlow p-2 px-4  flex jutisfy-between items-center  bg-gray-txt/10 backdrop-blur-lg border-2 border-white/10 shadow-md rounded-lg whitespace-nowrap">
             
             {width > 600 ? (<p className="text-p-txt text-sm md:text-base">
               For

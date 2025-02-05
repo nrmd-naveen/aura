@@ -2,20 +2,20 @@ import WhySectionCarousal from "../components/CardCarousal";
 
 
 
-const WhyAura = () => {
+const WhyAura = ({ whySecRef }) => {
     return (
         <>
-            <div className="w-full  border-white/20 flex flex-col gap-3 md:gap-5 pt-6">
+            <section id={whySecRef} className="w-full  border-white/20 flex flex-col gap-3 md:gap-5 md:pt-6">
                 <Heading />
                 <WhySectionCarousal />
-            </div>
+            </section>
         </>
   )
 };
 
 const Heading = () => {
     return (
-        <div className=" font-league flex flex-col items-center text-center mt-20 px-4 text-nowrap text-[28px] md:text-5xl font-medium " >
+        <div className=" font-league flex flex-col items-center text-center md:mt-20 px-4 text-nowrap text-[28px] md:text-5xl font-medium " >
       <h2 className="text-white ">
         Reasons to Choose
         <span className="font-bold tracking-tight text-5xl md:text-7xl text-white pl-2 pr-1">aura</span> for

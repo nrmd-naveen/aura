@@ -5,21 +5,38 @@ import Testimonials from "./assets/sections/Testimonials"
 import WhyAura from "./assets/sections/WhyAura"
 import VideoCarousel from "./assets/components/VideoCarousel"
 import ContactForm from "./assets/components/FormComponent"
+import { useRef } from "react"
+import NavBar from "./assets/ui/NavBar"
+import ContactSection from "./assets/sections/contactSection"
 
 
 function App() {
+  // Use useRef to create references for each section
+  const heroRef = useRef(null);
+  const whySecRef = useRef(null);
+  const projectsRef = useRef(null);
+  const testiRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Scroll to the section when button is clicked
+  const scrollToSection = (sectionRef) => {
+    window.scrollTo({
+      top: sectionRef.current.offsetTop - 120,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <>
       <div className="w-screen relative overflow-hidden bg-primary">
         {/* <HeroSection /> */}
+        <NavBar heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} scrollToSection={scrollToSection} />
         
-        {/* <ContactForm /> */}
-
-        <HeroSection />
-        <WhyAura />
-        <OurWorks />
-        <Testimonials />
+        <HeroSection heroRef={heroRef} />
+        <WhyAura whySecRef={whySecRef} />
+        <OurWorks projectsRef={projectsRef} />
+        <Testimonials testiRef={testiRef} />
+        <ContactSection contactRef={contactRef} />
         
       </div>
     
