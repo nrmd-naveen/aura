@@ -1,3 +1,4 @@
+import { motion, useScroll, useTransform } from "framer-motion";
 import HeaderHeadings from "../components/HeaderTexts";
 import HeroTagLine from "../components/HeroTagLine";
 import GraphSVG from "../svg/GraphSVG";
@@ -5,12 +6,15 @@ import Button from "../ui/Button";
 import NavBar from "../ui/NavBar";
 
 const HeroSection = () => {
+
+    const { scrollY } = useScroll()
+    let y = useTransform(scrollY, [0,800], ["0%", "20%"])
     return (
         <>
         <div className="w-screen h-screen relative overflow-hidden bg-primary">    
-            <div className=" flex items-center justify-center absolute z-0 md:right-20 -right-110 md:bottom-0 bottom-[20%] ">
+            <motion.div style={{ y }} className=" flex items-center justify-center absolute z-0 md:right-20 -right-110 md:bottom-0 bottom-[23%] ">
                 <GraphSVG />
-            </div>
+            </motion.div>
             <NavBar />
             <HeaderHeadings />
             <HeroTagLine />

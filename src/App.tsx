@@ -3,7 +3,8 @@ import HeroSection from "./assets/sections/HeroSection"
 import OurWorks from "./assets/sections/OurWorks"
 import Testimonials from "./assets/sections/Testimonials"
 import WhyAura from "./assets/sections/WhyAura"
-import VideoCarousel from "./assets/ui/VideoCarousel"
+import VideoCarousel from "./assets/components/VideoCarousel"
+import ContactForm from "./assets/components/FormComponent"
 
 
 function App() {
@@ -11,13 +12,15 @@ function App() {
   return (
     <>
       <div className="w-screen relative overflow-hidden bg-primary">
+        {/* <HeroSection /> */}
+        
+        {/* <ContactForm /> */}
+
         <HeroSection />
         <WhyAura />
         <OurWorks />
         <Testimonials />
-        {/* <div>
-          <VideoCarousel />
-        </div> */}
+        
       </div>
     
     </>

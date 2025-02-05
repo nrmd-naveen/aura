@@ -1,5 +1,5 @@
 import React from "react";
-import VideoCarousel from "../ui/VideoCarousel";
+import VideoCarousel from "../components/VideoCarousel";
 
 const OurWorks = () => {
   return <>

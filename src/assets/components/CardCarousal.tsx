@@ -76,7 +76,7 @@ const Card = ({
   }
 } ) => {
     return (
-        <div key={props.title} className="min-h-52 h-80 md:h-90 w-64 md:w-80 bg-gray rounded-lg p-4 py-8 flex flex-col gap-8 items-center justify-center" >
+        <div key={props.title} className="min-h-52 h-80 md:h-90 w-64 md:w-80 bg-primary/20 border border-gray backdrop-blur-3xl rounded-lg p-4 py-8 flex flex-col gap-8 items-center justify-center" >
             <Icon icon={props.icon} />
             <div className="w-80 text-center">
                 <h2 className="font-sora text-sm md:text-lg text-white text-nowrap">
