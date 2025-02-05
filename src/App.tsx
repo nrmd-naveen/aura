@@ -1,37 +1,29 @@
-import CardCarousel from "./assets/components/CardCarousal"
-import HeroSection from "./assets/sections/HeroSection"
-import OurWorks from "./assets/sections/OurWorks"
-import Testimonials from "./assets/sections/Testimonials"
-import WhyAura from "./assets/sections/WhyAura"
-import VideoCarousel from "./assets/components/VideoCarousel"
-import ContactForm from "./assets/components/FormComponent"
-
+import CardCarousel from "./assets/components/CardCarousal";
+import HeroSection from "./assets/sections/HeroSection";
+import OurWorks from "./assets/sections/OurWorks";
+import Testimonials from "./assets/sections/Testimonials";
+import WhyAura from "./assets/sections/WhyAura";
+import VideoCarousel from "./assets/components/VideoCarousel";
+import ContactForm from "./assets/components/FormComponent";
 
 function App() {
-
   return (
     <>
       <div className="w-screen relative overflow-hidden bg-primary">
         {/* <HeroSection /> */}
-        
+
         {/* <ContactForm /> */}
 
         <HeroSection />
         <WhyAura />
         <OurWorks />
         <Testimonials />
-        
       </div>
-    
     </>
-  )
-  
+  );
 }
 
-export default App
-
-
-
+export default App;
 
 // return (
 //     <>
@@ -58,7 +50,7 @@ export default App
 //                 />
 //               </div>
 //           </div>
-          
+
 //           <div className=" absolute z-20 bottom-[10%]">
 //             <GraphSVG />
 //           </div>
@@ -66,7 +58,7 @@ export default App
 
 //         <div className="h-32"></div>
 //         <VideoCarousel />
-        
+
 //         <div className="h-72"></div>
 //       </div>
 //     </>
