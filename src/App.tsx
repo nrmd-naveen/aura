@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import CardCarousel from "./assets/components/CardCarousal";
-import HeroSection from "./assets/sections/HeroSection";
-import OurWorks from "./assets/sections/OurWorks";
-import Testimonials from "./assets/sections/Testimonials";
-import WhyAura from "./assets/sections/WhyAura";
-import VideoCarousel from "./assets/components/VideoCarousel";
-import ContactForm from "./assets/components/FormComponent";
-
-function App() {
-=======
 import CardCarousel from "./assets/components/CardCarousal"
 import HeroSection from "./assets/sections/HeroSection"
 import OurWorks from "./assets/sections/OurWorks"
@@ -37,20 +26,10 @@ function App() {
     });
   };
 
->>>>>>> ed3fa693cb63b069462b69469262f54457a46b6d
   return (
     <>
       <div className="w-screen relative overflow-hidden bg-primary">
         {/* <HeroSection /> */}
-<<<<<<< HEAD
-
-        {/* <ContactForm /> */}
-
-        <HeroSection />
-        <WhyAura />
-        <OurWorks />
-        <Testimonials />
-=======
         <NavBar heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} scrollToSection={scrollToSection} />
         
         <HeroSection heroRef={heroRef} />
@@ -59,7 +38,6 @@ function App() {
         <Testimonials testiRef={testiRef} />
         <ContactSection contactRef={contactRef} />
         
->>>>>>> ed3fa693cb63b069462b69469262f54457a46b6d
       </div>
     </>
   );
