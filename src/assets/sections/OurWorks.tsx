@@ -1,4 +1,4 @@
-import React from "react";
+
 import VideoCarousel from "../components/VideoCarousel";
 
 const OurWorks = () => {
