@@ -13,15 +13,9 @@ const Services = ({ servicesRef }) => {
         <>
             <section ref={servicesRef} id="services" className="relative h-full flex flex-col gap-8 md:gap-16 items-center justify-center" >
                 <Heading />
-                <motion.div className="h-full w-full">
-{/* 
-                    <motion.div style={{y}} className="absolute -top-10 md:top-90 -left-25 md:-left-180 rotate-[20deg]">
-                        <BgBlur />
-                    </motion.div> */}
                     <motion.div style={{y}} className="absolute -top-40 md:-top-90 -right-260 md:-right-180">
                         <BgBlur />
                     </motion.div>
-                </motion.div> 
                 <div className="flex flex-wrap justify-center items-center">
                 {
                     servicesData.map( (service , ind) => <ServiceCard key={ind} data={service} />)

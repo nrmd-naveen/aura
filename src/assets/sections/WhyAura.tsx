@@ -5,7 +5,7 @@ import WhySectionCarousal from "../components/CardCarousal";
 const WhyAura = ({ whySecRef }) => {
     return (
         <>
-            <section id={whySecRef} className="w-full  border-white/20 flex flex-col gap-3 md:gap-5 md:pt-6">
+            <section id={whySecRef} className="w-full  border-white/20 flex flex-col gap-3 md:gap-5 md:pt-6 pb-10 md:pb-4">
                 <Heading />
                 <WhySectionCarousal />
             </section>

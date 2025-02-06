@@ -149,7 +149,6 @@ export const MobileIcon = () => {
 export const RightArrow = () => {
   return (
     <>
-      <span className="py-[7px] px-[18px] bg-gray rounded-full">
         <svg
           width="14"
           height="12"
@@ -164,7 +163,7 @@ export const RightArrow = () => {
             fill="white"
           />
         </svg>
-      </span>
+    
     </>
   );
 };
@@ -172,7 +171,6 @@ export const RightArrow = () => {
 export const LeftArrow = () => {
   return (
     <>
-      <span className="py-[7px] px-[18px] bg-gray rounded-full">
         <svg
           width="14"
           height="12"
@@ -187,7 +185,6 @@ export const LeftArrow = () => {
             fill="white"
           />
         </svg>
-      </span>
     </>
   );
 };

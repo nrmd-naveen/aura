@@ -24,7 +24,7 @@ export default function WhySectionCarousal() {
 
     return (
       <>
-      <div className="relative flex justify-center items-center h-96 mt-12">
+      <div className="relative flex justify-center items-center h-96 mt-12 ">
     <div className="flex flex-col items-center justify-center h-full  w-full  overflow-hidden">
       <AnimatePresence>
         {cardData.map((card, idx) => (
@@ -42,23 +42,21 @@ export default function WhySectionCarousal() {
       </AnimatePresence>
         </div>
         </div>
-        <div className="flex justify-center items-center gap-8 pt-6">
-          <Button
-            className=" bg-gray-800 text-white rounded-t-full rounded-b-full"
-            variant="outline"
+        <div className="flex justify-center items-center gap-8 md:pt-6 ">
+          <button
             onClick={() => setIndex((prev) => (prev - 1 + cardData.length) % cardData.length)}
-            icon={<LeftArrow />}
+            className="p-5 bg-transparent px-8 shadow-[inset_-1px_-1px_30px_#676767] rounded-full text-white opacity-80"
           >
-            Prev
-          </Button>
-          <Button
-            variant="outline"
-            className="  bg-gray-800 text-white rounded-t-full rounded-b-full"
+            <LeftArrow />
+          </button>
+          
+          <button
             onClick={() => setIndex((prev) => (prev + 1) % cardData.length)}
-            icon={<RightArrow />}
-            >
-            Next
-          </Button>
+            className="p-5 bg-transparent px-8 shadow-[inset_-1px_-1px_30px_#676767] rounded-full text-white opacity-80"
+          >
+            <RightArrow />
+          </button>
+
       </div>
         
       </>
