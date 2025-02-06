@@ -34,7 +34,7 @@ export default function ContactForm() {
     setIsSubmitting(true); // Disable submission
 
     console.log("Form Submitted:", data);
-      return;
+    // return;
     // Send the form data to admin via EmailJS
     emailjs
       .send(
@@ -100,27 +100,27 @@ export default function ContactForm() {
           <div>
             <label className="block mb-1">Name</label>
             <Input
-                fullWidth={true}
-                placeHolder="name"
-                type="text"
-                variant="outline"
-                register={register}
-                name="name"
+              fullWidth={true}
+              placeHolder="name"
+              type="text"
+              variant="outline"
+              register={register}
+              name="name"
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.name.message}</p>
             )}
           </div>
 
-            <div>
+          <div>
             <label className="block mb-1">Email</label>
             <Input
-                fullWidth={true}
-                placeHolder="Email"
-                type="email"
-                variant="outline"
-                register={register}
-                name="email"
+              fullWidth={true}
+              placeHolder="Email"
+              type="email"
+              variant="outline"
+              register={register}
+              name="email"
             />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email.message}</p>
@@ -130,14 +130,14 @@ export default function ContactForm() {
           <div>
             <label className="block mb-1">Phone Number</label>
             <Input
-                fullWidth={true}
-                placeHolder="phone"
-                type="text"
-                variant="outline"
-                register={register}
-                name="phone"
+              fullWidth={true}
+              placeHolder="phone"
+              type="text"
+              variant="outline"
+              register={register}
+              name="phone"
             />
-  
+
             {errors.phone && (
               <p className="text-red-500 text-sm">{errors.phone.message}</p>
             )}
@@ -151,23 +151,68 @@ export default function ContactForm() {
               {...register("service")}
               className="w-full outline-none flex justify-center items-center pl-6 pr-10 py-4 md:py-3 rounded-full font-sora text-white text-sm md:text-base bg-transparent inset-ring-2 inset-ring-white/20   appearance-none"
             >
-              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="">Select your Service</option>
-              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Logo design">Logo design</option>
-              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Website Development">Website Development</option>
-              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Digital / Content/ Influencer Marketing">
+              <option
+                className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white"
+                value=""
+              >
+                Select your Service
+              </option>
+              <option
+                className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white"
+                value="Logo design"
+              >
+                Logo design
+              </option>
+              <option
+                className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white"
+                value="Website Development"
+              >
+                Website Development
+              </option>
+              <option
+                className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white"
+                value="Digital / Content/ Influencer Marketing"
+              >
                 Digital / Content/ Influencer Marketing
               </option>
-              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Video editing">Video editing</option>
-              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Advertisement shoot">Advertisement shoot</option>
-              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Social media management">
+              <option
+                className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white"
+                value="Video editing"
+              >
+                Video editing
+              </option>
+              <option
+                className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white"
+                value="Advertisement shoot"
+              >
+                Advertisement shoot
+              </option>
+              <option
+                className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white"
+                value="Social media management"
+              >
                 Social media management
               </option>
-              <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Meta / Google ads">Meta / Google ads</option>
+              <option
+                className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white"
+                value="Meta / Google ads"
+              >
+                Meta / Google ads
+              </option>
             </select>
             <span className="absolute right-4 top-2/3 transform -translate-y-1/2 text-gray-txt">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </span>
             {errors.service && (
               <p className="text-red-500 text-sm">{errors.service.message}</p>
@@ -188,15 +233,13 @@ export default function ContactForm() {
           )}
         </div>
         <div className="flex items-center justify-center my-6">
-          
-        <Button
-          text={isSubmitting ? "Sending..." : "Send your Inquiry →"}
-          variant="secondary"
-          disabled={isSubmitting}
-          type="submit"
+          <Button
+            text={isSubmitting ? "Sending..." : "Send your Inquiry →"}
+            variant="primary"
+            disabled={isSubmitting}
+            type="submit"
           />
         </div>
-        
       </form>
     </div>
   );
