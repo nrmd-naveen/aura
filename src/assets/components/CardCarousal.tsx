@@ -45,14 +45,14 @@ export default function WhySectionCarousal({ projectsRef }) {
         <div className="flex justify-center items-center gap-8 md:pt-6 ">
           <button
             onClick={() => setIndex((prev) => (prev - 1 + cardData.length) % cardData.length)}
-            className="p-5 bg-transparent px-8 shadow-[inset_-1px_-1px_30px_#676767] rounded-full text-white opacity-80"
+            className="p-5 cursor-pointer bg-transparent px-8 shadow-[inset_-1px_-1px_30px_#676767] rounded-full text-white opacity-80 hover:opacity-100"
           >
             <LeftArrow />
           </button>
           
           <button
             onClick={() => setIndex((prev) => (prev + 1) % cardData.length)}
-            className="p-5 bg-transparent px-8 shadow-[inset_-1px_-1px_30px_#676767] rounded-full text-white opacity-80"
+            className="p-5 cursor-pointer bg-transparent px-8 shadow-[inset_-1px_-1px_30px_#676767] rounded-full text-white opacity-80 hover:opacity-100"
           >
             <RightArrow />
           </button>
@@ -86,7 +86,7 @@ const Card = ({
                 </p>
             </div>
             <Button
-                className="rounded-b-3xl pl-6 rounded-t-3xl inset-ring-[0.5px]"
+                className="rounded-b-3xl pl-6 rounded-t-3xl inset-ring-[0.5px] cursor-pointer"
                 variant="outline"
                 text="learn more"
                 href="#testimonials"

@@ -8,12 +8,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Services = ({ servicesRef }) => {
     const { scrollY } = useScroll();
-    let y = useTransform(scrollY, [2600, 3400], ["0%", "50%"]);
+    let y = useTransform(scrollY, [2600, 3600], ["0%", "50%"]);
     return (
         <>
             <section ref={servicesRef} id="services" className="relative h-full flex flex-col gap-8 md:gap-16 items-center justify-center" >
                 <Heading />
-                    <motion.div style={{y}} className="absolute -top-40 md:-top-90 -right-260 md:-right-180">
+                    <motion.div style={{y}} className="absolute -top-40 md:-top-90 -right-260 md:-right-200">
                         <BgBlur />
                     </motion.div>
                 <div className="flex flex-wrap justify-center items-center">
