@@ -4,13 +4,13 @@ const HeroTagLine = () => {
 
     const width = useScreenWidth()
     return (
-        <div className="flex flex-col gap-6 justify-center items-center px-4 mt-16 ">
+        <div className="flex flex-col gap-6 justify-center items-center px-4 mt-28 md:mt-16 z-40">
             
             <p className="text-white font-barlow sm:txt-2xl md:text-2xl">
             Innovative Digital Solutions to Ignite Growth
           </p>
 
-          <div className="z-40 min-h-16 min-w-40 font-barlow p-2 px-4  flex jutisfy-between items-center  bg-gray-txt/10 backdrop-blur-lg border-2 border-white/10 shadow-md rounded-lg whitespace-nowrap">
+          <div className="min-h-16 min-w-40 font-barlow p-2 px-4  flex jutisfy-between items-center  bg-gray-txt/10 backdrop-blur-lg border-2 border-white/10 shadow-md rounded-lg whitespace-nowrap">
             
             {width > 600 ? (<p className="text-p-txt text-sm md:text-base">
               For

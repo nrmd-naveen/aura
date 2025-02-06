@@ -3,7 +3,7 @@ import ContactForm from "../components/FormComponent";
 
 const ContactSection = ({ contactRef }) => {
     return (
-        <section className="h-full "  id="contact" ref={contactRef} >
+        <section className="h-full w-full"  id="contact" ref={contactRef} >
             <Heading />
             <ContactForm />
       </section>

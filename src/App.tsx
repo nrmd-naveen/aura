@@ -7,8 +7,9 @@ import VideoCarousel from "./assets/components/VideoCarousel"
 import ContactForm from "./assets/components/FormComponent"
 import { useRef } from "react"
 import NavBar from "./assets/ui/NavBar"
-import ContactSection from "./assets/sections/contactSection"
 import Services from "./assets/sections/Services"
+import { scrollToSection } from "./assets/utils/config"
+import ContactSection from "./assets/sections/ContactSection"
 
 
 function App() {
@@ -20,13 +21,6 @@ function App() {
   const contactRef = useRef(null);
   const servicesRef = useRef(null);
 
-  // Scroll to the section when button is clicked
-  const scrollToSection = (sectionRef) => {
-    window.scrollTo({
-      top: sectionRef.current.offsetTop - 120,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <>
@@ -35,8 +29,8 @@ function App() {
         <NavBar heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} scrollToSection={scrollToSection} />
         
 
-        <HeroSection heroRef={heroRef} />
-        <WhyAura whySecRef={whySecRef} />
+        <HeroSection heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef}/>
+        <WhyAura whySecRef={whySecRef} projectsRef={projectsRef}/>
         <OurWorks projectsRef={projectsRef} />
         <Services servicesRef={servicesRef}/>
         <Testimonials testiRef={testiRef} />

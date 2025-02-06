@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
 import { LeftArrow, RightArrow } from "../svg/Icons";
-import { cardData } from "../utils/config";
+import { cardData, scrollToSection } from "../utils/config";
 
 
-export default function WhySectionCarousal() {
+export default function WhySectionCarousal({ projectsRef }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function WhySectionCarousal() {
             exit={{ opacity: 0 }}
             >
               
-                <Card props={card} key={idx} /> 
+                <Card props={card} key={idx} projectsRef={projectsRef}/> 
           </motion.div>
         ))}
       </AnimatePresence>
@@ -65,13 +65,14 @@ export default function WhySectionCarousal() {
 
 
 const Card = ({
-  props
+  props, projectsRef
 }: {
     props: {
-    icon: React.ReactNode,
-    title: string,
-    paragraph: string
-  }
+      icon: React.ReactNode,
+      title: string,
+      paragraph: string
+      },
+    projectsRef: any
 } ) => {
     return (
         <div key={props.title} className="min-h-52 h-80 md:h-90 w-64 md:w-80 bg-primary/20 border border-gray backdrop-blur-3xl rounded-lg p-4 py-8 flex flex-col gap-8 items-center justify-center" >
@@ -90,7 +91,7 @@ const Card = ({
                 text="learn more"
                 href="#testimonials"
                 icon={<RightArrow />}
-                onClick={()=> alert("clicked")}
+                onClick={()=> scrollToSection(projectsRef)}
             />
         </div>
     )
