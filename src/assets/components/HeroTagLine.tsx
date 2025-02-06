@@ -4,7 +4,7 @@ const HeroTagLine = () => {
 
     const width = useScreenWidth()
     return (
-        <div className="flex flex-col gap-6 justify-center items-center px-4 mt-28 md:mt-16 z-40">
+        <div className="flex flex-col gap-6 justify-center items-center px-4 mt-20 md:mt-16 z-40">
             
             <p className="text-white font-barlow sm:txt-2xl md:text-2xl">
             Innovative Digital Solutions to Ignite Growth

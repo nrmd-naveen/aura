@@ -223,15 +223,15 @@ export const Instagram = () => {
   );
 };
 
-export const Instagramh = () => {
+export const Instagramh = ({ classNames } : { classNames: string }) => {
   return (
     <>
-      <img src={insta} className='h-12 opacity-80'/>
+      <img src={insta} className={ classNames } />
     </>
   );
 };
 
-export const Camerah = () => {
+export const Camerah = ({ classNames } : { classNames: string }) => {
   return (
     <>
       {/* <svg
@@ -247,7 +247,7 @@ export const Camerah = () => {
         />
       </svg> */}
 
-      <img src={camera} className='h-12 opacity-80'/>
+      <img src={camera} className={classNames}/>
     </>
   );
 };
@@ -269,10 +269,10 @@ export const Youtubeh = () => {
   );
 };
 
-export const Graphh = () => {
+export const Graphh = ({ classNames } : { classNames: string }) => {
   return (
     <>
-      <img src={facebook} className='h-12 opacity-80'/>
+      <img src={facebook} className={ classNames } />
     </>
   );
 };
