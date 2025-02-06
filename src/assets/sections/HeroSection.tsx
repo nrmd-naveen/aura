@@ -5,8 +5,9 @@ import GraphSVG from "../svg/GraphSVG";
 import Button from "../ui/Button";
 import NavBar from "../ui/NavBar";
 import FloatingIcons from "../components/heroelements";
+import { scrollToSection } from "../utils/config";
 
-const HeroSection = ({ heroRef }) => {
+const HeroSection = ({ heroRef, projectsRef, contactRef }: any) => {
   const { scrollY } = useScroll();
   let y = useTransform(scrollY, [0, 800], ["0%", "20%"]);
   return (
@@ -25,16 +26,16 @@ const HeroSection = ({ heroRef }) => {
 
           <HeaderHeadings />
           <HeroTagLine />
-          <div className="flex justify-center gap-5 mt-8">
+          <div className="flex justify-center gap-5 mt-10 md:mt-8">
             <Button
               variant="primary"
               text="Get Started"
-              onClick={() => alert("Get Started")}
+              onClick={() => scrollToSection(contactRef)}
             />
             <Button
               variant="secondary"
               text="Our Works"
-              onClick={() => alert("Our Works")}
+              onClick={() => scrollToSection(projectsRef)}
             />
           </div>
         </div>

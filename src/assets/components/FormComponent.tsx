@@ -34,7 +34,7 @@ export default function ContactForm() {
     setIsSubmitting(true); // Disable submission
 
     console.log("Form Submitted:", data);
-      return;
+      // return;
     // Send the form data to admin via EmailJS
     emailjs
       .send(
@@ -91,17 +91,17 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="md:mt-8 flex items-center justify-center">
+    <div className="font-sora md:mt-8 flex items-center justify-center w-full mb-20">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className=" text-white p-6 rounded-lg w-full max-w-3xl"
+        className=" text-white p-6 rounded-3xl w-full max-w-[950px] bg-white/2 px-20"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label className="block mb-1">Name</label>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 ">
+          <div className="">
+            <label className=" block my-2 md:my-3 md:ml-6">Name</label>
             <Input
                 fullWidth={true}
-                placeHolder="name"
+                placeHolder="Name"
                 type="text"
                 variant="outline"
                 register={register}
@@ -113,7 +113,7 @@ export default function ContactForm() {
           </div>
 
             <div>
-            <label className="block mb-1">Email</label>
+            <label className=" block my-2 md:my-3 md:ml-6">Email</label>
             <Input
                 fullWidth={true}
                 placeHolder="Email"
@@ -127,29 +127,15 @@ export default function ContactForm() {
             )}
           </div>
 
-          <div>
-            <label className="block mb-1">Phone Number</label>
-            <Input
-                fullWidth={true}
-                placeHolder="phone"
-                type="text"
-                variant="outline"
-                register={register}
-                name="phone"
-            />
-  
-            {errors.phone && (
-              <p className="text-red-500 text-sm">{errors.phone.message}</p>
-            )}
-          </div>
+          
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 mt-4 md:my-6">
           <div className="relative">
-            <label className="block mb-1">Select Service</label>
+            <label className=" block my-2 md:my-3 md:ml-6">Select Service</label>
             <select
               {...register("service")}
-              className="w-full outline-none flex justify-center items-center pl-6 pr-10 py-4 md:py-3 rounded-full font-sora text-white text-sm md:text-base bg-transparent inset-ring-2 inset-ring-white/20   appearance-none"
+              className="w-full max-w- outline-none flex justify-center items-center pl-6 pr-10 py-4 md:py-3 rounded-full font-sora text-white text-sm md:text-base font-extralight bg-transparent inset-ring-2 inset-ring-white/20 cursor-pointer appearance-none "
             >
               <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="">Select your Service</option>
               <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Logo design">Logo design</option>
@@ -164,7 +150,7 @@ export default function ContactForm() {
               </option>
               <option className="bg-gray hover:bg-gray-txt text-white/50 hover:text-white" value="Meta / Google ads">Meta / Google ads</option>
             </select>
-            <span className="absolute right-4 top-2/3 transform -translate-y-1/2 text-gray-txt">
+            <span className="absolute right-4 top-9/12 transform -translate-y-1/2 text-gray-txt">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="6 9 12 15 18 9" />
             </svg>
@@ -173,15 +159,30 @@ export default function ContactForm() {
               <p className="text-red-500 text-sm">{errors.service.message}</p>
             )}
           </div>
+          <div>
+            <label className=" block my-2 md:my-3 md:ml-6">Phone Number</label>
+            <Input
+                fullWidth={true}
+                placeHolder="Phone"
+                type="number"
+                variant="outline"
+                register={register}
+                name="phone"
+            />
+  
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone.message}</p>
+            )}
+          </div>
         </div>
 
-        <div className="mt-4">
-          <label className="block mb-1">Message</label>
+        <div className="mt-4 md:my-10">
+          <label className=" block my-2 md:my-3 md:ml-6">Message</label>
           <textarea
             {...register("message")}
             className="w-full outline-none flex justify-center items-center pl-6 pr-10 py-5 rounded-3xl font-sora textwhite text-sm md:text-base bg-transparent inset-ring-2 inset-ring-white/20 placeholder-gray-txt"
             placeholder="Enter your Message"
-            rows="4"
+            rows={4}
           />
           {errors.message && (
             <p className="text-red-500 text-sm">{errors.message.message}</p>

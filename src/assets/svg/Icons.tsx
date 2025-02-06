@@ -1,3 +1,4 @@
+import camera from './image.png'
 export const ClickIcon = () => {
   return (
     <>
@@ -425,7 +426,7 @@ export const Instagramh = () => {
 export const Camerah = () => {
   return (
     <>
-      <svg
+      {/* <svg
         width="44"
         height="38"
         viewBox="0 0 44 38"
@@ -436,7 +437,9 @@ export const Camerah = () => {
           d="M24 8.44444V4.22222H8V0H28V8.44444H30C31.1046 8.44444 32 9.38963 32 10.5556V15.2L42.4266 7.49594C42.879 7.16163 43.5026 7.27778 43.8192 7.75538C43.9368 7.9328 44 8.14412 44 8.3607V33.8616C44 34.4445 43.5522 34.9171 43 34.9171C42.7948 34.9171 42.5946 34.8504 42.4266 34.7263L32 27.0222V35.8889C32 37.0549 31.1046 38 30 38H2C0.89544 38 0 37.0549 0 35.8889V10.5556C0 9.38963 0.89544 8.44444 2 8.44444H24ZM8 16.8889V21.1111H12V16.8889H8Z"
           fill="white"
         />
-      </svg>
+      </svg> */}
+
+      <img src={camera} className='h-16 opacity-80'/>
     </>
   );
 };
@@ -461,7 +464,7 @@ export const Youtubeh = () => {
 export const Graphh = () => {
   return (
     <>
-      <svg height="48" viewBox="0 0 427 409" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg height="50" viewBox="0 0 427 409" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_di_1_78)">
 <rect x="39" width="349.146" height="332.626" rx="42.99" fill="white"/>
 <g clip-path="url(#clip0_1_78)">

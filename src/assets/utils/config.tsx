@@ -116,3 +116,11 @@ export const testiData = [
         company: "Company Name"
     },
 ]
+
+
+export  const scrollToSection = (sectionRef: any) => {
+    window.scrollTo({
+      top: sectionRef.current.offsetTop - 120,
+      behavior: 'smooth',
+    });
+  };

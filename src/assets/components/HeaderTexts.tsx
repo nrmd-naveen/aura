@@ -1,7 +1,7 @@
 function HeaderHeadings() {
   return (
     <>
-          <div className="flex flex-col gap-2 md:gap-6 justify-center items-center mt-16 w-full text-gray-txt font-league text-nowrap ">
+          <div className="flex flex-col gap-2 md:gap-6 justify-center items-center mt-22 md:mt-16 w-full text-gray-txt font-league text-nowrap ">
     <div>            
     <p className=" flex justify-center items-center w-full font-medium Spartan text-3xl sm:text-5xl md:text-6xl">
         Grow Your
