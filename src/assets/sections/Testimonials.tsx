@@ -5,7 +5,7 @@ const Testimonials = ({ testiRef }) => {
     return <>
         <section id="testimonials" ref={testiRef} className="my-20 md:my-40">
             <Heading />
-            <div className="flex gap-2 mt-10 p-4 animate-infinite-scroll md:animate-infinite-scroll-desk ">
+            <div className="flex gap-2 mt-10 md:mt-20 p-4 animate-infinite-scroll md:animate-infinite-scroll-desk ">
                 {testiData.map((data, index) => (
                     <TestiCard key={index} props={data} />
                 ))}

@@ -233,11 +233,12 @@ export default function ContactForm() {
           )}
         </div>
         <div className="flex items-center justify-center my-6">
-          <Button
-            text={isSubmitting ? "Sending..." : "Send your Inquiry →"}
-            variant="primary"
-            disabled={isSubmitting}
-            type="submit"
+          
+        <Button
+          text={isSubmitting ? "Sending..." : "Send your Inquiry →"}
+          variant="primary"
+          disabled={isSubmitting}
+          type="submit"
           />
         </div>
       </form>

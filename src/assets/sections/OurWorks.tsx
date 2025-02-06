@@ -5,7 +5,7 @@ const OurWorks = ({ projectsRef }) => {
   return <>
           <section id="ourWorks" ref={projectsRef} className="my-20 md:my-40">
               <Heading />
-              <div>
+              <div className="mt-10 md:mt-15">
                 <VideoCarousel />
               </div>
           </section>

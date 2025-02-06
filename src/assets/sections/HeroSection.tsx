@@ -17,7 +17,7 @@ const HeroSection = ({ heroRef }) => {
         </div>
         <div className="w-screen h-screen relative overflow-hidden bg-primary">
           <motion.div
-            style={{ y }}
+            style={{  }}
             className=" flex items-center justify-center absolute z-0 md:right-20 -right-110 md:bottom-0 bottom-[23%] "
           >
             <GraphSVG />
