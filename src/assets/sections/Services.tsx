@@ -1,14 +1,27 @@
 import React from "react";
 import { MobileIcon } from "../svg/Icons";
 import { servicesData } from "../utils/config";
+import BgBlur from "../svg/BgBlur";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 
 
 const Services = ({ servicesRef }) => {
+    const { scrollY } = useScroll();
+    let y = useTransform(scrollY, [2600, 3400], ["0%", "50%"]);
     return (
         <>
-            <section ref={servicesRef} id="services" className="h-full flex flex-col gap-8 md:gap-16 items-center justify-center" >
+            <section ref={servicesRef} id="services" className="relative h-full flex flex-col gap-8 md:gap-16 items-center justify-center" >
                 <Heading />
+                <motion.div className="h-full w-full">
+{/* 
+                    <motion.div style={{y}} className="absolute -top-10 md:top-90 -left-25 md:-left-180 rotate-[20deg]">
+                        <BgBlur />
+                    </motion.div> */}
+                    <motion.div style={{y}} className="absolute -top-40 md:-top-90 -right-260 md:-right-180">
+                        <BgBlur />
+                    </motion.div>
+                </motion.div> 
                 <div className="flex flex-wrap justify-center items-center">
                 {
                     servicesData.map( (service , ind) => <ServiceCard key={ind} data={service} />)
@@ -41,7 +54,7 @@ const Heading = () => {
 const ServiceCard = ({data, key}) => {
     
     return (
-        <div key={key} className="relative h-60 max-w-80 w-[45%] m-[2.5%] bg-white/3 backdrop-blur-xl rounded-lg mt-20">
+        <div key={key} className="relative h-60 max-w-80 w-[45%] m-[2.5%] border-1 border-gray bg-white/2 backdrop-blur-xl shadow-[inset_-12px_-8px_40px_#46464620] hover:shadow-[0px_1px_2px_rgba(100,_100,_100,_1),_0_10px_20px_rgba(204,_204,_204,_0.3)] rounded-lg mt-20 cursor-pointer">
             <div className="absolute  left-[30%] sm:left-[37%] -top-11">
                 <ServiceIcon icon={data.icon} />
             </div>
