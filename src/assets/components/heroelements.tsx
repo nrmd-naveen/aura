@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Graphh, Youtubeh, Camerah, Instagramh } from "../svg/Icons";
+import { Graphh, Camerah, Instagramh } from "../svg/Icons";
 
 const FloatingIcons = () => {
   return (

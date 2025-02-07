@@ -26,7 +26,7 @@ const HeroSection = ({ heroRef, projectsRef, contactRef }: any) => {
 
           <HeaderHeadings />
           <HeroTagLine />
-          <div className="flex justify-center gap-5 mt-10 md:mt-8">
+          <div className="flex justify-center gap-5 md:gap-10 mt-10">
             <Button
               variant="primary"
               text="Get Started"

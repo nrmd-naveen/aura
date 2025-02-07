@@ -13,10 +13,12 @@ const NavBar = ({ heroRef, projectsRef, contactRef, scrollToSection }) => {
                     <LogoSVG />
                 </button>   
                 </div>
-                <div className="flex justify-center items-center ">
+                <div className="flex justify-center items-center font-sora ">
                     <ul className="flex gap-0 ">
-                        <li className="text-white font-barlow tracking-wide text-sm md:text-base px-4 py-3 rounded-full"><button className="cursor-pointer" onClick={() => scrollToSection(projectsRef)}>Projects</button></li>
-                        <li className="text-white font-barlow tracking-wide text-sm md:text-base px-4 py-3 rounded-full"><button className="cursor-pointer" onClick={() => scrollToSection(contactRef)}>Contact Us</button></li>
+                        <li className="text-white/80 hover:text-white text-sm md:text-base px-4 py-3 rounded-full "><button className="cursor-pointer" onClick={() => scrollToSection(projectsRef)}>Projects</button></li>
+                        <li className="relative text-white/80 hover:text-white text-sm md:text-base px-4 py-3 rounded-full"><button className=" cursor-pointer" onClick={() => scrollToSection(contactRef)}>
+                            Contact Us
+                        </button></li>
                     </ul>
                 </div>
                 </div>

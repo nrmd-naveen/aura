@@ -10,6 +10,7 @@ import NavBar from "./assets/ui/NavBar"
 import Services from "./assets/sections/Services"
 import { scrollToSection } from "./assets/utils/config"
 import ContactSection from "./assets/sections/ContactSection"
+import Footer from "./assets/sections/Footer"
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
         <Services servicesRef={servicesRef}/>
         <Testimonials testiRef={testiRef} />
         <ContactSection contactRef={contactRef} />
-        
+        <Footer heroRef={heroRef} projectsRef={projectsRef} servicesRef={servicesRef} contactRef={contactRef} scrollToSection={scrollToSection}  />
       </div>
     </>
   );

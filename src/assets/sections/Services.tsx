@@ -1,7 +1,7 @@
 import React from "react";
 import { MobileIcon } from "../svg/Icons";
 import { servicesData } from "../utils/config";
-import BgBlur from "../svg/BgBlur";
+import { BgBlur } from "../svg/BgBlur";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 

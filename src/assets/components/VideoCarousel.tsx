@@ -16,7 +16,7 @@ const VideoCarousel = () => {
 
 const VideoCarouselItem = ({ video, id }: { video: string, id: number }) => {
   return (
-    <div id={id + ""} className= " h-[500px] min-w-[300px] ">
+    <div id={id + ""} className= " h-[500px] min-w-[300px] bg-gray rounded-lg ">
       <video
         className="w-full h-full rounded-lg object-cover"
         muted
@@ -31,3 +31,4 @@ const VideoCarouselItem = ({ video, id }: { video: string, id: number }) => {
 }
 
 export default VideoCarousel;
+
