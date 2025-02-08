@@ -2,10 +2,17 @@ import WhySectionCarousal from "../components/CardCarousal";
 
 
 
-const WhyAura = ({ whySecRef, projectsRef }) => {
+const WhyAura = (
+  {
+    whySecRef,
+    projectsRef
+  }: {
+    whySecRef: React.RefObject<HTMLInputElement>,
+    projectsRef: React.RefObject<HTMLInputElement>,
+  }) => {
     return (
         <>
-            <section id={whySecRef} className="w-full  border-white/20 flex flex-col gap-3 md:gap-5 md:pt-6 pb-10 md:pb-4">
+            <section id="whySection" ref={whySecRef} className="w-full  border-white/20 flex flex-col gap-3 md:gap-5 md:pt-6 pb-10 md:pb-4">
                 <Heading />
                 <WhySectionCarousal projectsRef={projectsRef} />
             </section>

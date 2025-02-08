@@ -1,12 +1,11 @@
 import React from "react";
-import { MobileIcon } from "../svg/Icons";
 import { servicesData } from "../utils/config";
 import { BgBlur } from "../svg/BgBlur";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 
 
-const Services = ({ servicesRef }) => {
+const Services = ({ servicesRef }:{ servicesRef: React.RefObject<HTMLInputElement> }) => {
     const { scrollY } = useScroll();
     let y = useTransform(scrollY, [2600, 3600], ["0%", "50%"]);
     return (
@@ -45,7 +44,18 @@ const Heading = () => {
     )
 }
 
-const ServiceCard = ({data, key}) => {
+const ServiceCard = (
+    {
+        data,
+        key
+    }: {
+        data: {
+            icon: React.ReactNode,
+            title: string,
+            paragraph: string
+            },
+        key: number
+    }) => {
     
     return (
         <div key={key} className="relative h-60 max-w-80 w-[45%] m-[2.5%] border-1 border-gray bg-white/2 backdrop-blur-xl shadow-[inset_-12px_-8px_40px_#46464620] hover:shadow-[0px_1px_2px_rgba(100,_100,_100,_1),_0_10px_20px_rgba(204,_204,_204,_0.3)] rounded-lg mt-20 cursor-pointer">

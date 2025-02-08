@@ -1,7 +1,7 @@
 
 import VideoCarousel from "../components/VideoCarousel";
 
-const OurWorks = ({ projectsRef }) => {
+const OurWorks = ({ projectsRef }: { projectsRef: React.RefObject<HTMLInputElement> }) => {
   return <>
           <section id="ourWorks" ref={projectsRef} className="my-20 md:my-40">
               <Heading />

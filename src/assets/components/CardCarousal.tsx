@@ -5,7 +5,7 @@ import { LeftArrow, RightArrow } from "../svg/Icons";
 import { cardData, scrollToSection } from "../utils/config";
 
 
-export default function WhySectionCarousal({ projectsRef }) {
+export default function WhySectionCarousal({ projectsRef }:{ projectsRef: React.RefObject<HTMLInputElement> }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

@@ -2,7 +2,20 @@
 import { GmailF, InstagramF, LinkedInF } from "../svg/Icons";
 import LogoSVG from "../svg/LogoSVG";
 
-const Footer = ({ heroRef, projectsRef, contactRef, servicesRef, scrollToSection}) => {
+const Footer = (
+  {
+    heroRef,
+    projectsRef,
+    contactRef,
+    servicesRef,
+    scrollToSection
+  }: {
+    heroRef : React.RefObject<HTMLInputElement> 
+    projectsRef: React.RefObject<HTMLInputElement> 
+    contactRef: React.RefObject<HTMLInputElement> 
+    servicesRef: React.RefObject<HTMLInputElement> 
+    scrollToSection: (refSection: React.RefObject<HTMLInputElement>) => void
+  }) => {
     return (
         <>
         <div className="flex flex-col gap-8 justify-center items-center py-6 bg-gradient-to-b to-[#363636] md:via-[#181818] rounded-t-xl px-4 md:px-20 mt-40 text-nowrap">

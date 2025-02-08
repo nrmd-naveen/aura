@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 interface ButtonProps {
-    type?: string
+    type?: "submit" | "reset" | "button" | undefined
     text?: string,
     href?: string,
     onClick: () => void,

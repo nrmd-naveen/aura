@@ -1,9 +1,7 @@
-import React from "react";
 import ContactForm from "../components/FormComponent";
-import { BgBlur, BgBlurSmall, DoubleRounded } from "../svg/BgBlur";
 import contactImg from './../svg/contact.png'
 
-const ContactSection = ({ contactRef }) => {
+const ContactSection = ({ contactRef }:{ contactRef: React.RefObject<HTMLInputElement> }) => {
     return (
         <section className="h-full w-full" id="contact" ref={contactRef} >
             
