@@ -7,7 +7,7 @@ export const videos: string[] = [
   "https://res.cloudinary.com/djcz1dyym/video/upload/q_auto/v1738922645/IMG_3877_kzqvwg.mov",
   "https://res.cloudinary.com/djcz1dyym/video/upload/q_auto/v1738923334/IMG_3878_erbjrl.mov",
   "https://res.cloudinary.com/djcz1dyym/video/upload/q_auto/v1738924320/IMG_3881_eaolnb.mov",
-  "https://res.cloudinary.com/djcz1dyym/video/upload/v1738923369/IMG_3882_kr8vj7.mov",
+  "https://res.cloudinary.com/djcz1dyym/video/upload/q_auto/v1738923369/IMG_3882_kr8vj7.mov",
   "https://res.cloudinary.com/djcz1dyym/video/upload/q_auto/v1738923995/IMG_3880_c3kvoa.mov",
 ];
  

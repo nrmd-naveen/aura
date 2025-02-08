@@ -40,7 +40,7 @@ export const servicesData = [
         title: "Meta / Google Ads",
         paragraph: "Reach your audience with targeted ads on Meta and Google, maximizing ROI through optimized campaigns.",
         icon: <ClickIcon />
-    }
+    },
 ]
 
 
