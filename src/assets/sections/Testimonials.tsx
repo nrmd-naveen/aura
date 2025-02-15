@@ -1,7 +1,7 @@
 import React from "react";
 import { testiData } from "../utils/config";
 
-const Testimonials = ({ testiRef }) => {
+const Testimonials = ({ testiRef }:{ testiRef: React.RefObject<HTMLInputElement> }) => {
     return <>
         <section id="testimonials" ref={testiRef} className="my-20 md:my-40">
             <Heading />

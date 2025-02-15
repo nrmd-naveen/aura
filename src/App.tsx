@@ -1,25 +1,23 @@
-import CardCarousel from "./assets/components/CardCarousal"
 import HeroSection from "./assets/sections/HeroSection"
 import OurWorks from "./assets/sections/OurWorks"
 import Testimonials from "./assets/sections/Testimonials"
 import WhyAura from "./assets/sections/WhyAura"
-import VideoCarousel from "./assets/components/VideoCarousel"
-import ContactForm from "./assets/components/FormComponent"
 import { useRef } from "react"
 import NavBar from "./assets/ui/NavBar"
 import Services from "./assets/sections/Services"
 import { scrollToSection } from "./assets/utils/config"
 import ContactSection from "./assets/sections/ContactSection"
+import Footer from "./assets/sections/Footer"
 
 
 function App() {
   // Use useRef to create references for each section
-  const heroRef = useRef(null);
-  const whySecRef = useRef(null);
-  const projectsRef = useRef(null);
-  const testiRef = useRef(null);
-  const contactRef = useRef(null);
-  const servicesRef = useRef(null);
+  const heroRef: React.RefObject<HTMLInputElement> = useRef(null);
+  const whySecRef: React.RefObject<HTMLInputElement>  = useRef(null);
+  const projectsRef: React.RefObject<HTMLInputElement>  = useRef(null);
+  const testiRef: React.RefObject<HTMLInputElement>  = useRef(null);
+  const contactRef: React.RefObject<HTMLInputElement>  = useRef(null);
+  const servicesRef: React.RefObject<HTMLInputElement>  = useRef(null);
 
 
   return (
@@ -29,13 +27,13 @@ function App() {
         <NavBar heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} scrollToSection={scrollToSection} />
         
 
-        <HeroSection heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef}/>
+        <HeroSection heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} scrollToSection={scrollToSection} />
         <WhyAura whySecRef={whySecRef} projectsRef={projectsRef}/>
         <OurWorks projectsRef={projectsRef} />
         <Services servicesRef={servicesRef}/>
         <Testimonials testiRef={testiRef} />
         <ContactSection contactRef={contactRef} />
-        
+        <Footer heroRef={heroRef} projectsRef={projectsRef} servicesRef={servicesRef} contactRef={contactRef} scrollToSection={scrollToSection}  />
       </div>
     </>
   );

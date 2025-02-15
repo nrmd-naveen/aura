@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -5,6 +6,7 @@ import emailjs from "emailjs-com";
 import { useState } from "react"; // Import useState
 import Input from "../ui/Input";
 import Button from "../ui/Button";
+import { DoubleRounded, DoubleRounded2 } from "../svg/BgBlur";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -91,10 +93,16 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="font-sora md:mt-8 flex items-center justify-center w-full mb-20">
+    <div className=" relative font-sora mt-8 flex items-center justify-center w-full mb-20">
+      <div className="z-0 absolute right-0 top-10 md:px-[21%]">
+          <DoubleRounded />
+      </div>
+      <div className="z-0 absolute left-20 md:left-70 md:rotate-90 bottom-0 md:px-[21%] opacity-80">
+          <DoubleRounded2 />
+      </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className=" text-white p-6 rounded-3xl w-full max-w-[950px] bg-white/2 px-20"
+        className="text-white p-6 rounded-t-3xl md:rounded-3xl w-full max-w-[950px] bg-gradientto-b from-white/2 backdrop-blur-3xl md:px-20"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 ">
           <div className="">

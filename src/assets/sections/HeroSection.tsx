@@ -1,15 +1,25 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import HeaderHeadings from "../components/HeaderTexts";
 import HeroTagLine from "../components/HeroTagLine";
 import GraphSVG from "../svg/GraphSVG";
 import Button from "../ui/Button";
-import NavBar from "../ui/NavBar";
 import FloatingIcons from "../components/heroelements";
-import { scrollToSection } from "../utils/config";
 
-const HeroSection = ({ heroRef, projectsRef, contactRef }: any) => {
-  const { scrollY } = useScroll();
-  let y = useTransform(scrollY, [0, 800], ["0%", "20%"]);
+const HeroSection = (
+  {
+    heroRef,
+    projectsRef,
+    contactRef,
+    scrollToSection
+  }: {
+    heroRef : React.RefObject<HTMLInputElement> 
+    projectsRef: React.RefObject<HTMLInputElement> 
+    contactRef: React.RefObject<HTMLInputElement> 
+    scrollToSection: (refSection: React.RefObject<HTMLInputElement>) => void
+  }
+) => {
+  // const { scrollY } = useScroll();
+  // let y = useTransform(scrollY, [0, 800], ["0%", "20%"]);
   return (
     <>
       <section id="heroSection" ref={heroRef}>
@@ -26,7 +36,7 @@ const HeroSection = ({ heroRef, projectsRef, contactRef }: any) => {
 
           <HeaderHeadings />
           <HeroTagLine />
-          <div className="flex justify-center gap-5 mt-10 md:mt-8">
+          <div className="flex justify-center gap-5 md:gap-10 mt-10">
             <Button
               variant="primary"
               text="Get Started"

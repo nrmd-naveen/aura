@@ -40,7 +40,7 @@ export const servicesData = [
         title: "Meta / Google Ads",
         paragraph: "Reach your audience with targeted ads on Meta and Google, maximizing ROI through optimized campaigns.",
         icon: <ClickIcon />
-    }
+    },
 ]
 
 
@@ -79,47 +79,69 @@ export const cardData = [
 
 
 export const testiData = [
-    {
-        icon: <Instagram />,
-        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
-        name: "Client name",
-        company: "Company Name"
+{
+    icon: <Instagram />,
+    review: "Thanks to Aura's design and marketing expertise, we've stood out and attracted more patients. Our brand is much stronger now!",
+    name: "Dr. Sai",
+    company: "Sai Dentistry"
+},
+{
+    icon: <Instagram />,
+    review: "The team at Aura took my brand to new heights. My online presence has exploded, and engagement is off the charts!",
+    name: "Panniduvom Official",
+    company: "Influencer"
+},
+{
+    icon: <Instagram />,
+    review: "Aura helped transform our brand. We've seen a huge increase in client inquiries, and we're thrilled with the results!",
+    name: "Best Interior Team",
+    company: "Best Interior"
+},
+{
+    icon: <Instagram />,
+    review: "Working with Aura was a game-changer. We've connected with more students, and our consultations have grown dramatically.",
+    name: "Noha",
+    company: "Overseas Educational Consultant"
+},
+{
+    icon: <Instagram />,
+    review: "Thanks to Aura’s incredible design and marketing, my bookings have gone through the roof, and my brand looks amazing.",
+    name: "Harsh",
+    company: "Harsh Makeup Studio"
+},
+{
+    icon: <Instagram />,
+    review: "Aura helped us grow in ways we never expected. Our brand is now more visible, and membership numbers are climbing fast.",
+    name: "Xeno Fitness Club Team",
+    company: "Xeno Fitness Club"
     },
+    // below are just copied 
     {
-        icon: <Instagram />,
-        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
-        name: "Client name",
-        company: "Company Name"
-    },
-    {
-        icon: <Instagram />,
-        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
-        name: "Client name",
-        company: "Company Name"
-    },
-    {
-        icon: <Instagram />,
-        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
-        name: "Client name",
-        company: "Company Name"
-    },
-    {
-        icon: <Instagram />,
-        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
-        name: "Client name",
-        company: "Company Name"
-    },
-    {
-        icon: <Instagram />,
-        review: "Aura transformed our brand identity with innovative designs and sharp marketing strategies. The results were beyond impressive!",
-        name: "Client name",
-        company: "Company Name"
-    },
+    icon: <Instagram />,
+    review: "Thanks to Aura's design and marketing expertise, we've stood out and attracted more patients. Our brand is much stronger now!",
+    name: "Dr. Sai",
+    company: "Sai Dentistry"
+},
+{
+    icon: <Instagram />,
+    review: "The team at Aura took my brand to new heights. My online presence has exploded, and engagement is off the charts!",
+    name: "Panniduvom Official",
+    company: "Influencer"
+},
+{
+    icon: <Instagram />,
+    review: "Aura helped transform our brand. We've seen a huge increase in client inquiries, and we're thrilled with the results!",
+    name: "Best Interior Team",
+    company: "Best Interior"
+},
+
+
 ]
 
 
-export  const scrollToSection = (sectionRef: any) => {
+export  const scrollToSection = (sectionRef: React.RefObject<HTMLInputElement> ): void => {
     window.scrollTo({
+        //@
       top: sectionRef.current.offsetTop - 120,
       behavior: 'smooth',
     });
