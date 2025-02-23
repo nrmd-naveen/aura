@@ -141,7 +141,7 @@ export const testiData = [
 
 export  const scrollToSection = (sectionRef: React.RefObject<HTMLInputElement> ): void => {
     window.scrollTo({
-        //@
+        //@ts-ignore
       top: sectionRef.current.offsetTop - 120,
       behavior: 'smooth',
     });
